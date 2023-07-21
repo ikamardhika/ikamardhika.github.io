@@ -18,3 +18,120 @@ section {
 #gallery .row > * {
   padding: 0;
 }
+
+/* My Cat Section */
+.cat-box {
+  position: relative;
+  background-color: #2c94da;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.cat-box::before {
+  content: "MY";
+  position: absolute;
+  color: #fff;
+  font-size: 6em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cat-box:hover::before {
+  left: 50%;
+  opacity: 0.3;
+}
+
+.cat-box::after {
+  content: "CAT";
+  position: absolute;
+  color: #fff;
+  font-size: 5em;
+  font-weight: bold;
+  font-style: italic;
+  top: 320px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cat-box:hover::after {
+  opacity: 0.3;
+}
+
+.cat-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.cat-box:hover .cat-name {
+  top: 30px;
+  opacity: 1;
+}
+
+.cat-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.cat-box:hover .cat-detail-button {
+  opacity: 1;
+  bottom: 25px;
+}
+
+.cat-img {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate3d(-50%, -50%, 100px);
+  max-width: 250px;
+  transition: 0.5s;
+}
+
+/* Supaya ketika cursor di hover atau pointed ke gambar, gambar membesar */
+.cat-box:hover .cat-img {
+  transform: translate3d(-50%, -50%, 100px) scale(1.1);
+}
+
+.cat-img2 {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate3d(-50%, -50%, 100px);
+  max-width: 250px;
+  transition: 0.5s;
+}
+
+.cat-box:hover .cat-img2 {
+  transform: translate3d(-50%, -50%, 100px) scale(1.1);
+}
+
+.cat-img3 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate3d(-50%, -50%, 100px);
+  max-width: 250px;
+  transition: 0.5s;
+}
+
+.cat-box:hover .cat-img3 {
+  transform: translate3d(-50%, -50%, 100px) scale(1.1);
+}
